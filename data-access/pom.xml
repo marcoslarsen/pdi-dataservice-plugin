@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>pentaho</groupId>
+    <artifactId>pdi-dataservice-client</artifactId>
+    <version>9.0.0.0-SNAPSHOT</version>
+  </parent>
+
+  <artifactId>data-access-modules-dataservices</artifactId>
+  <packaging>pom</packaging>
+
+  <modules>
+    <module>apis</module>
+    <module>impls</module>
+    <module>assemblies</module>
+  </modules>
+
+  <properties>
+    <pentaho-metadata.version>9.0.0.0-SNAPSHOT</pentaho-metadata.version>
+  </properties>
+
+  <dependencies>
+    <dependency>
+      <groupId>org.pentaho</groupId>
+      <artifactId>pentaho-metadata</artifactId>
+      <version>${pentaho-metadata.version}</version>
+    </dependency>
+  </dependencies>
+
+</project>

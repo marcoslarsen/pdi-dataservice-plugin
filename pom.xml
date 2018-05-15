@@ -16,6 +16,7 @@
     <module>pdi-dataservice-client-api</module>
     <module>pdi-dataservice-client</module>
     <module>assemblies</module>
+    <module>data-access</module>
   </modules>
   <scm>
     <connection>scm:git:git@github.com:pentaho/${project.artifactId}.git</connection>
