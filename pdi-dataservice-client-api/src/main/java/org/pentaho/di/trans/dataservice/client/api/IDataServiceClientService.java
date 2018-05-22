@@ -37,6 +37,10 @@ public interface IDataServiceClientService {
     TIME_BASED, ROW_BASED
   }
 
+  enum StreamingType {
+    POLLING, PUSH
+  }
+
   void setMetaStore( IMetaStore metaStore );
   void setRepository( Repository repository );
   DataInputStream query( String sql, int maxRows ) throws SQLException;
@@ -45,6 +49,10 @@ public interface IDataServiceClientService {
                          long windowLimit ) throws SQLException;
   DataInputStream query( String sql, StreamingMode windowMode, long windowSize, long windowEvery,
                          long windowLimit, Map<String, String> params ) throws SQLException;
+  DataInputStream query( String sql, StreamingType streamingType, StreamingMode windowMode, long windowSize,
+                         long windowEvery, long windowLimit ) throws SQLException;
+  DataInputStream query( String sql, StreamingType streamingType, StreamingMode windowMode, long windowSize,
+                         long windowEvery, long windowLimit, Map<String, String> params ) throws SQLException;
   List<IThinServiceInformation> getServiceInformation() throws SQLException;
   IThinServiceInformation getServiceInformation( String name ) throws SQLException;
   List<String> getServiceNames() throws SQLException;
